@@ -9,9 +9,9 @@ VERSION ?= 0.0
 
 prepare:
 	#echo ${DOCKER_REPO_PASS} | docker login ${PULL_DOCKER_REPO} -u ${DOCKER_REPO_USER} --password-stdin
-	#echo ${DOCKER_REPO_PASS} | docker login ${PUSH_DOCKER_REPO} -u ${DOCKER_REPO_USER} --password-stdin
+	echo ${DOCKER_REPO_PASS} | docker login ${PUSH_DOCKER_REPO} -u ${DOCKER_REPO_USER} --password-stdin
 
-build: prepare
+build:
 	podman build --network host . \
 		-t ${PUSH_DOCKER_REPO}/redis-benchmark:${VERSION} \
 		-t ${PUSH_DOCKER_REPO}/redis-benchmark:latest \

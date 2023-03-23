@@ -38,7 +38,7 @@ if [ -n "${TESTS}" ]; then
 fi
 
 if [ ${TEST_CONNECTIONS} -gt 1 ]; then
-    EXTRA_ARGS="${EXTRA_ARGS} -c ${TEST_CONNECTIONS}"
+    EXTRA_ARGS="${EXTRA_ARGS} -k ${TEST_CONNECTIONS}"
 fi
 
 if [ ${TEST_SIZE} -ne 3 ]; then

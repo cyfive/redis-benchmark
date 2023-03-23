@@ -53,5 +53,5 @@ if [ -n "${CUSTOM_ARGS}" ]; then
     EXTRA_ARGS="${EXTRA_ARGS} ${CUSTOM_ARGS}"
 fi
 
-echo "redis-benchmark -h ${HOST} -p ${PORT} -n ${TEST_REQUESTS} ${EXTRA_ARGS}"
+redis-benchmark -h ${HOST} -p ${PORT} -n ${TEST_REQUESTS} ${EXTRA_ARGS}
 

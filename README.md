@@ -6,7 +6,7 @@
 * Podman
 * make
 
-### Build and deploy
+### Build and publish
 
 Run build:
 
@@ -26,10 +26,10 @@ Available configuration options:
 
 `VERSION` - image tag, default value is `0.0`
 
-If you want push builded image to own registry you must set `DOCKER_REPO_USER` and `DOCKER_REPO_PASS`, like this:
+If you want to publish builded image to own registry you must set `DOCKER_REPO_USER` and `DOCKER_REPO_PASS`, like this:
 
 ```
-make VERSION=0.1 DOCKER_REPO_USER=johndoe DOCKER_REPO_PASS=S3cR3t deploy
+make VERSION=0.1 DOCKER_REPO_USER=johndoe DOCKER_REPO_PASS=S3cR3t publish
 ```
 
 ## Usage

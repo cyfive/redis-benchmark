@@ -18,7 +18,7 @@ build:
 		--build-arg VERSION=${VERSION} \
 		--build-arg DOCKER_REPO=${PULL_DOCKER_REPO}
 
-deploy: prepare
+publish: prepare
 	podman push ${PUSH_DOCKER_REPO}/redis-benchmark:${VERSION}
 	podman push ${PUSH_DOCKER_REPO}/redis-benchmark:latest
 

@@ -61,6 +61,6 @@ podman run -ti --rm -e REDIS_HOST=redis.example.com redis-benchmark
 ```
 
 ## Examples
-See `examples` folder.
+See `example/` folder.
 
 

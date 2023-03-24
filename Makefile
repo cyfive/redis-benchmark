@@ -5,7 +5,7 @@ PUSH_DOCKER_REPO ?= quay.io
 DOCKER_REPO_USER ?= please-set-user-name
 DOCKER_REPO_PASS ?= please-set-password
 
-VERSION ?= 0.0
+VERSION ?= 7.0.10
 
 prepare:
 	#echo ${DOCKER_REPO_PASS} | docker login ${PULL_DOCKER_REPO} -u ${DOCKER_REPO_USER} --password-stdin
@@ -15,7 +15,7 @@ build:
 	podman build --network host . \
 		-t ${PUSH_DOCKER_REPO}/redis-benchmark:${VERSION} \
 		-t ${PUSH_DOCKER_REPO}/redis-benchmark:latest \
-		--build-arg VERSION=${VERSION} \
+		--build-arg REDIS_VERSION=${VERSION} \
 		--build-arg DOCKER_REPO=${PULL_DOCKER_REPO}
 
 publish: prepare

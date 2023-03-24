@@ -1,4 +1,4 @@
-# A Redis benchmark toolset docker image
+# A Redis benchmark docker image
 
 
 ## Build
